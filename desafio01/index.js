@@ -27,6 +27,8 @@ function qtdRequests(req, res, next) {
   return next();
 }
 
+server.use(qtdRequests);
+
 /*GET /projects: Rota que lista todos projetos e suas tarefas;*/
 server.get('/projects', (req, res) => {
   return res.json(projects);
